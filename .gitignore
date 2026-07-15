@@ -23,6 +23,7 @@ dist-ssr
 *.sln
 *.sw?
 .env
+.env.*
 .oxlintrc.json
 .package-lock.json
 .vite.config.js

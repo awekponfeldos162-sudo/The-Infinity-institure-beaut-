@@ -1,0 +1,67 @@
+@import "tailwindcss";
+
+@theme {
+  /* Palette THE INFINITY — alignée sur la charte graphique officielle */
+  --color-ivory: #f7f3eb;
+  --color-sand: #e6d8c3;
+  --color-gold: #d4af37;
+  --color-gold-light: #e2c468;
+  --color-gold-dark: #7b5e2e;
+  --color-ink: #2a2419;
+  --color-ink-soft: #55503f;
+
+  --font-display: "Playfair Display", "Times New Roman", serif;
+  --font-sans: "Poppins", "Helvetica Neue", Arial, sans-serif;
+
+  --shadow-soft: 0 1px 2px rgba(42, 36, 25, 0.04), 0 6px 20px rgba(42, 36, 25, 0.05);
+  --shadow-soft-hover: 0 2px 6px rgba(42, 36, 25, 0.06), 0 14px 32px rgba(182, 137, 63, 0.14);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+body {
+  background-color: var(--color-ivory);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  font-weight: 300;
+  -webkit-font-smoothing: antialiased;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-gold);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+.catalog-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-gold-light) transparent;
+}
+.catalog-scroll::-webkit-scrollbar {
+  height: 4px;
+}
+.catalog-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+.catalog-scroll::-webkit-scrollbar-thumb {
+  background-color: var(--color-gold-light);
+  border-radius: 999px;
+}
+
+.font-display {
+  font-family: var(--font-display);
+}

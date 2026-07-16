@@ -36,8 +36,8 @@ export default function Hero() {
             </div>
           </div>
 
-          <div className="relative aspect-[4/5] w-full overflow-hidden rounded-[2rem] shadow-soft-hover lg:aspect-[5/6]">
-            <img src={heroImage} alt="Soin du visage réalisé à l'institut THE INFINITY" className="h-full w-full object-cover" />
+              <div className="floaty relative aspect-[4/5] w-full overflow-hidden rounded-[2rem] shadow-soft-hover lg:aspect-[5/6]">            
+              <img src={heroImage} alt="Soin du visage réalisé à l'institut THE INFINITY" className="h-full w-full object-cover" />
           </div>
         </div>
 

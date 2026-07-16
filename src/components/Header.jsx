@@ -52,17 +52,17 @@ export default function Header() {
   return (
     <>
       <header
-        className={`fixed inset-x-0 top-0 z-50 bg-ivory/95 backdrop-blur-sm shadow-soft transition-all duration-500 ${
-          scrolled || open ? "translate-y-0 opacity-100" : "-translate-y-full opacity-0 pointer-events-none"
+        className={`fixed inset-x-0 top-4 z-50 flex justify-center px-4 transition-all duration-500 ${
+          scrolled || open ? "translate-y-0 opacity-100" : "-translate-y-24 opacity-0 pointer-events-none"
         }`}
       >
-        <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-3 lg:px-10">
+        <div className="floaty flex w-full max-w-5xl items-center justify-between rounded-full bg-ivory/95 px-6 py-2.5 shadow-soft-hover backdrop-blur-sm lg:px-8">
           <a href="#accueil" aria-label="THE INFINITY — Accueil">
             <Logo />
           </a>
 
-          <div className="hidden items-center gap-8 lg:flex">
-            <nav className="flex items-center gap-8">
+          <div className="hidden items-center gap-7 lg:flex">
+            <nav className="flex items-center gap-7">
               {LINKS.map((link) => (
                 <a
                   key={link.href}
@@ -81,16 +81,13 @@ export default function Header() {
               ))}
             </nav>
 
-            <a
-              href="#rendez-vous"
-              className="rounded-full border border-gold px-6 py-2.5 text-sm tracking-wide text-ink transition-all duration-300 hover:bg-gold hover:text-white hover:shadow-soft-hover"
-            >
+            <a href="#rendez-vous" className="rounded-full bg-gold px-6 py-2.5 text-sm tracking-wide text-white transition-all duration-300 hover:bg-gold-dark hover:shadow-soft-hover">
               Prendre RDV
             </a>
           </div>
 
           <button type="button" onClick={() => setOpen(true)} className="text-ink lg:hidden" aria-label="Ouvrir le menu">
-            <Menu size={26} strokeWidth={1.4} />
+            <Menu size={24} strokeWidth={1.4} />
           </button>
         </div>
       </header>
